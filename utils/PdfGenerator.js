@@ -3,7 +3,7 @@ const path = require('path');
 const handlebars = require('handlebars');
 const pdf = require('html-pdf');
 
-hello
+
 
 const generatePrescriptionPDF = async (data, fileName) => {
     const templatePath = path.join(__dirname, '../templates/Prescription.hbs');
