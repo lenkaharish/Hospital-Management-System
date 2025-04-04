@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prescription</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { color: #007BFF; text-align:center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Hospital</h2>
+    <p><strong>Doctor ID:</strong> {{doctorId}}</p>
+    <p><strong>Doctor Name:</strong> {{doctorName}}</p>
+    <p><strong>Patient Name:</strong> {{patientName}}</p>
+    <p><strong>Patient Age:</strong> {{patientAge}}</p>
+    <p><strong>Patient Gender:</strong>{{patientGender}}</p>
+    
+    <h3>Medications</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>MG</th>
+                <th>Tablet Count</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each medications}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.mg}}</td>
+                <td>{{this.tabletCount}}</td>
+                <td>{{this.price}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+    <h3>Total Price: ₹{{totalPrice}}</h3>
+</body>
+</html>
